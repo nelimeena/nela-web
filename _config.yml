@@ -1,0 +1,14 @@
+title: Nela Vojtová
+url: https://nelavojtova.cz
+baseurl: ""
+lang: cs
+timezone: Europe/Prague
+permalink: /blog/:title/
+markdown: kramdown
+future: false
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - _drafts
+  - .github
