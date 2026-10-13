@@ -1,4 +1,18 @@
 ---
 layout: default
 ---
-<main class="wrap"><header class="article-header"><div class="eyebrow">{{ page.category | default: 'Blog' }}</div><h1>{{ page.title | escape }}</h1>{% assign words = content | strip_html | number_of_words %}{% assign minutes = words | plus: 199 | divided_by: 200 %}{% if minutes < 1 %}{% assign minutes = 1 %}{% endif %}<div class="meta"><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%d. %m. %Y' }}</time> · {{ minutes }} min čtení</div></header><article class="article-body">{{ content }}<div class="article-bottom"><a href="/blog/">← Zpět na blog</a></div></article></main>
+<main class="wrap">
+  <article>
+    <header class="article-header">
+      <div class="eyebrow">{{ page.category | default: 'Blog' | escape }}{% if page.date %} · <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%-d. %-m. %Y' }}</time>{% endif %}</div>
+      <h1>{{ page.title | escape }}</h1>
+      {% if page.description %}<p style="color:var(--muted);font-size:1.08rem;line-height:1.7">{{ page.description | escape }}</p>{% endif %}
+    </header>
+    <div class="article-body">
+      {{ content }}
+      <nav class="article-bottom" aria-label="Navigace po článku">
+        <a href="{{ '/blog/' | relative_url }}">← Zpět na všechny články</a>
+      </nav>
+    </div>
+  </article>
+</main>

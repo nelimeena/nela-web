@@ -1,13 +1,17 @@
 ---
 layout: post
 title: "Název článku"
-description: "Krátký popis pro Google a náhled článku."
+description: "Stručný a konkrétní popisek článku pro Google (ideálně přibližně 140–160 znaků)."
 category: "Koučink a seberozvoj"
 category_slug: "koucink"
 ---
 
-Sem napiš první odstavec článku.
+Úvodní odstavec, který čtenáři vysvětlí, o čem článek bude.
 
-## Mezititulek
+## První mezititulek
+
+Text článku.
+
+## Druhý mezititulek
 
 Další text článku.
